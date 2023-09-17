@@ -1,34 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### Discord Clone by Feryael Justice
 
-## Getting Started
+A Discord clone built with NextJS 13, React, Tailwind, Shadcn, PlanetScale, Clerk, and Socket.io.
 
-First, run the development server:
+## Author
+@FeryaelJustice (FeryaelDev)
 
-```bash
+**Features:**
+
+* Create and manage servers
+* Chat with other users in real time
+* Send and receive messages, images, and videos
+* Create and join voice and video channels
+* Share your screen
+* And more!
+
+**Getting started:**
+
+1. Clone the repository:
+git clone https://github.com/FeryaelJustice/discord-clone.git
+2. Install the dependencies:
+npm install
+3. Create a `.env` file and add the following environment variables:
+PLANETSCALE_DATABASE_URL=<your PlanetScale database URL>
+CLERK_API_KEY=<your Clerk API key>
+4. Start the development server:
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+5. Visit `http://localhost:3000` in your browser to start using the Discord clone!
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Deployment:**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To deploy the Discord clone to production, you can use a service like Vercel or Netlify.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+**Contributing:**
 
-## Learn More
+Bug reports and pull requests are welcome!
 
-To learn more about Next.js, take a look at the following resources:
+**License:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The Discord clone is licensed under the MIT License.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Technologies used:
 
-## Deploy on Vercel
+* NextJS 13
+* React
+* Tailwind
+* Shadcn
+* PlanetScale
+* Clerk
+* Socket.io
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Notes:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+* This Discord clone is still under development.
+* Please report any bugs or issues to the GitHub repository.
+* Have fun!
