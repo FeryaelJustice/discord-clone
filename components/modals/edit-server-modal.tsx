@@ -53,7 +53,7 @@ export const EditServerModal = () => {
             form.setValue("name", server.name);
             form.setValue("imageUrl", server.imageUrl);
         }
-    }, [server]);
+    }, [server, form]);
 
 
     const isLoading = form.formState.isSubmitting;
