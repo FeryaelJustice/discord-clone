@@ -16,7 +16,6 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useModal } from "@/hooks/use-modal-store"
 import { useOrigin } from "@/hooks/use-origin";
-import { set } from "zod";
 
 export const InviteModal = () => {
     const { onOpen, isOpen, onClose, type, data } = useModal();
