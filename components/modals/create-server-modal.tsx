@@ -29,7 +29,7 @@ import { useModal } from "@/hooks/use-modal-store"
 
 const formSchema = z.object({
     name: z.string().min(1, "Server name is required"),
-    imageUrl: z.string().url("Must be a valid URL"),
+    imageUrl: z.string().min(1, { message: "Must be a valid URL" }),
 });
 
 export const CreateServerModal = () => {
