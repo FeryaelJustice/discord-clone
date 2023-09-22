@@ -27,6 +27,7 @@ import { Button } from "@/components/ui/button";
 import { useParams, useRouter } from "next/navigation";
 import { useModal } from "@/hooks/use-modal-store";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { useEffect } from "react";
 
 const formSchema = z.object({
     name: z.string().min(1, "Channel name is required").refine(name => name !== "general", { message: "Channel name cannot be 'general'" }),
@@ -34,19 +35,28 @@ const formSchema = z.object({
 });
 
 export const CreateChannelModal = () => {
-    const { isOpen, onClose, type } = useModal();
+    const { isOpen, onClose, type, data } = useModal();
     const router = useRouter();
     const params = useParams();
 
     const isModalOpen = isOpen && type === "createChannel";
+    const { channelType } = data;
 
     const form = useForm({
         resolver: zodResolver(formSchema),
         defaultValues: {
             name: "",
-            type: ChannelType.TEXT
+            type: channelType || ChannelType.TEXT
         },
     });
+
+    useEffect(() => {
+        if (channelType) {
+            form.setValue("type", channelType);
+        } else {
+            form.setValue("type", ChannelType.TEXT);
+        }
+    }, [channelType, form]);
 
     const isLoading = form.formState.isSubmitting;
 
